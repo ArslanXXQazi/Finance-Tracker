@@ -58,6 +58,11 @@ class HomeNavView extends StatelessWidget {
           width: width*1,
           color: Colors.grey.shade400,
         ),
+       Column(
+         crossAxisAlignment: CrossAxisAlignment.start,
+         children: [
+         BoldText(text: 'Budgeted for Feb, 2025'),
+       ],)
 
       ],),
     );
