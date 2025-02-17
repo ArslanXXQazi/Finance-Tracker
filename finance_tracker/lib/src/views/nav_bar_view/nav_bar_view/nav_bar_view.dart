@@ -39,11 +39,13 @@ class _NavBarViewState extends State<NavBarView> {
           unselectedItemColor: Colors.grey,
           type: BottomNavigationBarType.fixed,
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.trolley),label: 'Orders'),
-            BottomNavigationBarItem(icon: Icon(Icons.message_outlined),label: 'Inbox'),
-            BottomNavigationBarItem(icon: Icon(Icons.account_balance_wallet_outlined),label: 'Wallet'),
-            BottomNavigationBarItem(icon: Icon(Icons.person),label: 'Profile'),
+
+
+            // BottomNavigationBarItem(icon: Icon(Icons.grid_view),label: 'Home'),
+            // BottomNavigationBarItem(icon: Icon(Icons.receipt_long),label: 'Orders'),
+            // BottomNavigationBarItem(icon: Icon(Icons.message_outlined),label: 'Inbox'),
+            // BottomNavigationBarItem(icon: Icon(Icons.account_balance_wallet_outlined),label: 'Wallet'),
+            // BottomNavigationBarItem(icon: Icon(Icons.person),label: 'Profile'),
           ]
       ),
     );
