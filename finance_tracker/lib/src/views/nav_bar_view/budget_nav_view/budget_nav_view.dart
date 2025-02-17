@@ -1,5 +1,6 @@
 import 'package:finance_tracker/src/controller/components/budget_item_row.dart';
 import 'package:finance_tracker/src/controller/components/custom_text.dart';
+import 'package:finance_tracker/src/controller/components/non_budgeted_row.dart';
 import 'package:finance_tracker/src/controller/constant/images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -68,6 +69,7 @@ class BudgetNavView extends StatelessWidget {
                child: BoldText(text: 'Budgeted for Feb, 2025'),
              ),
                Divider(),
+               //===========================================>>>>Row For Dining
               BudgetItemRow(
                   name: "Dining",
                   limit: 1000.00,
@@ -75,6 +77,7 @@ class BudgetNavView extends StatelessWidget {
                   remaining: 744
               ),
                Divider(),
+               //===========================================>>>>Row For Groceries
                BudgetItemRow(
                    name: "Groceries",
                    limit: 500.00,
@@ -87,36 +90,17 @@ class BudgetNavView extends StatelessWidget {
                  child: BoldText(text: 'No Budgeted this month'),
                ),
                Divider(),
-               Row(
-                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                 children: [
-                Row(children: [
-                  Container(
-                    height: height*.04,
-                    width: width*.1,
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade100,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.black,width: 2),
-                    ),
-                    child: Icon(Icons.shopping_cart_outlined),
-                  ),
-                  SizedBox(width: width*.03,),
-                  CustomText(text: 'Entertainment'),
-                ],),
-                OutlinedButton(
-                    onPressed: (){},
-                    style: OutlinedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      )
-                    ),
-                    child: CustomText(text: 'SET BUDGET',fontWeight: FontWeight.bold,))
-               ],)
+               NonBudgetedRow(onTap: (){}, name: "Entertainment"),
+               Divider(),
+               NonBudgetedRow(onTap: (){}, name: "Fuel"),
+               Divider(),
+               NonBudgetedRow(onTap: (){}, name: "Movies"),
+               Divider(),
+               NonBudgetedRow(onTap: (){}, name: "Home"),
              ],),
           )
 
-        ],),
+        ],).animate().fadeIn(duration: 1.seconds).slideY(),
       ),
     );
   }
