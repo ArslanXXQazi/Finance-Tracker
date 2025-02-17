@@ -67,9 +67,12 @@ class BudgetNavView extends StatelessWidget {
                child: BoldText(text: 'Budgeted for Feb, 2025'),
              ),
                Divider(),
-               Row(children: [
+               Row(
+                 crossAxisAlignment: CrossAxisAlignment.start,
+                 mainAxisAlignment: MainAxisAlignment.start,
+                 children: [
                  Expanded(
-                   flex: 20,
+                   flex: 15,
                      child: Column(children: [
                    Container(
                      height: height*.05,
@@ -82,11 +85,52 @@ class BudgetNavView extends StatelessWidget {
                      child: Icon(Icons.shopify),
                    )
                  ],)),
+                 SizedBox(width: width*.03,),
                  Expanded(
-                   flex: 80,
-                     child: Column(children: [
-                       
-                 ],))
+                   flex: 85,
+                     child: Column(
+                       crossAxisAlignment: CrossAxisAlignment.start,
+                       children: [
+                       Row(
+                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                         children: [
+                           BoldText(text: "Dining"),
+                           Icon(Icons.more_horiz),
+                         ],
+                       ),
+                       SizedBox(height: height*.015,),
+                       Row(
+                         children: [
+                           CustomText(text: 'Limit: '),
+                           CustomText(text: '1000.00'),
+                         ],
+                       ),
+                       Row(
+                         children: [
+                           CustomText(text: 'Spent: '),
+                           CustomText(text: '256.00',color: Colors.red,),
+                         ],
+                       ),
+                       Row(
+                         children: [
+                           CustomText(text: 'Remaining: '),
+                           CustomText(text: '244',color: Colors.green,),
+                         ],
+                       ),
+                       SizedBox(height: height*.003,),
+                       Container(
+                         decoration: BoxDecoration(
+                           border: Border.all(color: Colors.black),
+                         ),
+                         child: LinearProgressIndicator(
+                           backgroundColor: Colors.white,
+                           minHeight: height*.01,
+                           value: .3,
+
+                           valueColor: AlwaysStoppedAnimation(Colors.green),
+                         ),
+                       )
+                 ],)),
                ],)
 
              ],),
