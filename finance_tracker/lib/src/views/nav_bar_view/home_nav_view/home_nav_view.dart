@@ -1,4 +1,5 @@
 import 'package:finance_tracker/src/controller/components/custom_text.dart';
+import 'package:finance_tracker/src/controller/constant/images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,11 +16,11 @@ class HomeNavView extends StatelessWidget {
         backgroundColor: Colors.white,
         title: BoldText(text: 'Budget',fontSize: 22,),
         actions: [
-          ImageIcon(AssetImage('assets/search.png'),size: width*.09,),
+          ImageIcon(AssetImage(Appimages.search),size: width*.09,),
           SizedBox(width: width*.05,),
-          ImageIcon(AssetImage('assets/scanner.png'),size: width*.075),
+          ImageIcon(AssetImage(Appimages.scanner),size: width*.075),
           SizedBox(width: width*.04,),
-          ImageIcon(AssetImage('assets/more.png'),size: width*.09),
+          ImageIcon(AssetImage(Appimages.more),size: width*.09),
         ],
       ),
       body: Column(children: [

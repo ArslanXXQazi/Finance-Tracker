@@ -1,3 +1,4 @@
+import 'package:finance_tracker/src/controller/constant/images.dart';
 import 'package:finance_tracker/src/views/nav_bar_view/home_nav_view/home_nav_view.dart';
 import 'package:flutter/material.dart';
 
@@ -42,14 +43,14 @@ class _NavBarViewState extends State<NavBarView> {
 
               type: BottomNavigationBarType.fixed,
               items: [
-                BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/homeNav.png')),label: 'Home'),
-                BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/transaction.png')),label: 'Home'),
+                BottomNavigationBarItem(icon: ImageIcon(AssetImage(Appimages.homeNav)),label: 'Home'),
+                BottomNavigationBarItem(icon: ImageIcon(AssetImage(Appimages.transaction)),label: 'Transaction'),
                 BottomNavigationBarItem(icon: CircleAvatar(
                   backgroundColor: Colors.green,
                   radius: 30,
                 ),label: ''),
-                BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/portfolio.png')),label: 'Home'),
-                BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/budget.png')),label: 'Home'),
+                BottomNavigationBarItem(icon: ImageIcon(AssetImage(Appimages.budgetNav)),label: 'Budget'),
+                BottomNavigationBarItem(icon: ImageIcon(AssetImage(Appimages.portfolio)),label: 'Portfolio'),
 
                 // BottomNavigationBarItem(icon: Icon(Icons.grid_view),label: 'Home'),
                 // BottomNavigationBarItem(icon: Icon(Icons.receipt_long),label: 'Orders'),
