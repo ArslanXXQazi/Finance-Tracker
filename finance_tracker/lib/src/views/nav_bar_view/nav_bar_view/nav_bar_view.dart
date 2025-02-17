@@ -31,31 +31,34 @@ class _NavBarViewState extends State<NavBarView> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: widgetOptions.elementAt(_selectedindex),
-      bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.white,
-          currentIndex: _selectedindex,
-          onTap: navOntab,
-          selectedItemColor: Colors.black,
-          unselectedItemColor: Colors.grey,
-          type: BottomNavigationBarType.fixed,
-          items: [
+      bottomNavigationBar: Stack(
+        children: [
+          BottomNavigationBar(
+              backgroundColor: Colors.white,
+              currentIndex: _selectedindex,
+              onTap: navOntab,
+              selectedItemColor: Colors.black,
+              unselectedItemColor: Colors.grey,
+              type: BottomNavigationBarType.fixed,
+              items: [
+                BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/homeNav.png')),label: 'Home'),
+                BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/transaction.png')),label: 'Home'),
+                BottomNavigationBarItem(icon: CircleAvatar(
+                  backgroundColor: Colors.green,
+                  radius: 30,
+                ),label: ''),
+                BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/portfolio.png')),label: 'Home'),
+                BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/budget.png')),label: 'Home'),
 
+                // BottomNavigationBarItem(icon: Icon(Icons.grid_view),label: 'Home'),
+                // BottomNavigationBarItem(icon: Icon(Icons.receipt_long),label: 'Orders'),
+                // BottomNavigationBarItem(icon: Icon(Icons.message_outlined),label: 'Inbox'),
+                // BottomNavigationBarItem(icon: Icon(Icons.account_balance_wallet_outlined),label: 'Wallet'),
+                // BottomNavigationBarItem(icon: Icon(Icons.person),label: 'Profile'),
+              ]
+          ),
 
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/homeNav.png')),label: 'Home'),
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/transaction.png')),label: 'Home'),
-            BottomNavigationBarItem(icon: CircleAvatar(
-              backgroundColor: Colors.green,
-              radius: 30,
-            ),label: ''),
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/portfolio.png')),label: 'Home'),
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/budget.png')),label: 'Home'),
-
-            // BottomNavigationBarItem(icon: Icon(Icons.grid_view),label: 'Home'),
-            // BottomNavigationBarItem(icon: Icon(Icons.receipt_long),label: 'Orders'),
-            // BottomNavigationBarItem(icon: Icon(Icons.message_outlined),label: 'Inbox'),
-            // BottomNavigationBarItem(icon: Icon(Icons.account_balance_wallet_outlined),label: 'Wallet'),
-            // BottomNavigationBarItem(icon: Icon(Icons.person),label: 'Profile'),
-          ]
+        ],
       ),
     );
   }
