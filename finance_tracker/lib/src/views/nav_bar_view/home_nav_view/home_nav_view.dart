@@ -17,8 +17,8 @@ class HomeNavView extends StatelessWidget {
         actions: [
           ImageIcon(AssetImage('assets/search.png'),size: width*.09,),
           SizedBox(width: width*.05,),
-          ImageIcon(AssetImage('assets/scanner.png'),size: width*.09),
-          SizedBox(width: width*.05,),
+          ImageIcon(AssetImage('assets/scanner.png'),size: width*.075),
+          SizedBox(width: width*.04,),
           ImageIcon(AssetImage('assets/more.png'),size: width*.09),
         ],
       ),

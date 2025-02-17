@@ -39,6 +39,7 @@ class _NavBarViewState extends State<NavBarView> {
               onTap: navOntab,
               selectedItemColor: Colors.black,
               unselectedItemColor: Colors.black,
+
               type: BottomNavigationBarType.fixed,
               items: [
                 BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/homeNav.png')),label: 'Home'),
