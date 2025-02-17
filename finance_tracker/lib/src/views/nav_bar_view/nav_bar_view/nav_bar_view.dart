@@ -41,11 +41,14 @@ class _NavBarViewState extends State<NavBarView> {
           items: [
 
 
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/home.png')),label: 'Home'),
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/home.png')),label: 'Home'),
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/home.png')),label: 'Home'),
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/home.png')),label: 'Home'),
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/home.png')),label: 'Home'),
+            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/homeNav.png')),label: 'Home'),
+            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/transaction.png')),label: 'Home'),
+            BottomNavigationBarItem(icon: CircleAvatar(
+              backgroundColor: Colors.green,
+              radius: 30,
+            ),label: ''),
+            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/portfolio.png')),label: 'Home'),
+            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/budget.png')),label: 'Home'),
 
             // BottomNavigationBarItem(icon: Icon(Icons.grid_view),label: 'Home'),
             // BottomNavigationBarItem(icon: Icon(Icons.receipt_long),label: 'Orders'),
