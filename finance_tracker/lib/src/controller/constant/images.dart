@@ -9,5 +9,6 @@ class Appimages
   static String scanner='assets/scanner.png';
   static String search='assets/search.png';
   static String transaction='assets/transaction.png';
+  static String cart='assets/cart.png';
 
 }
