@@ -1,4 +1,3 @@
-import 'package:finance_tracker/src/views/nav_bar_view/home_nav_view/home_nav_view.dart';
 import 'package:finance_tracker/src/views/nav_bar_view/nav_bar_view/nav_bar_view.dart';
 import 'package:flutter/material.dart';
 
