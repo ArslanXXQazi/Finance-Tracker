@@ -1,3 +1,5 @@
+import 'package:finance_tracker/src/views/nav_bar_view/home_nav_view/home_nav_view.dart';
+import 'package:finance_tracker/src/views/nav_bar_view/nav_bar_view/nav_bar_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,7 +33,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home:NavBarView(),
+      // const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
