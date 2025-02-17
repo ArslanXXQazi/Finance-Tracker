@@ -23,6 +23,41 @@ class HomeNavView extends StatelessWidget {
         ],
       ),
       body: Column(children: [
+        Container(
+          height: height*.001,
+          width: width*1,
+          color: Colors.grey.shade400,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            IconButton(icon: Icon(Icons.chevron_left), onPressed: () {}),
+           CustomText(text: 'February, 2025',fontSize: 18,),
+            IconButton(icon: Icon(Icons.chevron_right), onPressed: () {}),
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Column(
+              children: [
+                CustomText(text: 'Total Budget'),
+                CustomText(text: '₹1,500.00',color: Colors.green,),
+              ],
+            ),
+            Column(
+              children: [
+                CustomText(text: 'Total Spend'),
+                CustomText(text: '₹100.00',color: Colors.red,),
+              ],
+            ),
+          ],
+        ),
+        Container(
+          height: height*.001,
+          width: width*1,
+          color: Colors.grey.shade400,
+        ),
 
       ],),
     );
