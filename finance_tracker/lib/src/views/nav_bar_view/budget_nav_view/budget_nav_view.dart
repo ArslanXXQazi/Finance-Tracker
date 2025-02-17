@@ -76,10 +76,15 @@ class BudgetNavView extends StatelessWidget {
               ),
                Divider(),
                BudgetItemRow(
-                   name: "Dining",
-                   limit: 1000.00,
+                   name: "Groceries",
+                   limit: 500.00,
                    spent: 256,
-                   remaining: 744
+                   remaining: 244
+               ),
+               Divider(),
+               Padding(
+                 padding:  EdgeInsets.symmetric(vertical: height*.01),
+                 child: BoldText(text: 'No Budgeted this month'),
                ),
              ],),
           )

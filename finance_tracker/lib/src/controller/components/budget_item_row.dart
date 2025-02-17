@@ -57,7 +57,7 @@ class BudgetItemRow extends StatelessWidget {
                          child: Icon(Icons.more_horiz)),
                     ],
                   ),
-                  SizedBox(height: height*.015,),
+                  SizedBox(height: height*.01,),
                   Row(
                     children: [
                       CustomText(text: 'Limit: '),
