@@ -69,6 +69,9 @@
 //   }
 // }
 import 'package:finance_tracker/src/views/nav_bar_view/budget_nav_view/budget_nav_view.dart';
+import 'package:finance_tracker/src/views/nav_bar_view/home_nav_view/home_nav_view.dart';
+import 'package:finance_tracker/src/views/nav_bar_view/portfolio_nav_view/portfolio_nav_view.dart';
+import 'package:finance_tracker/src/views/nav_bar_view/transcation_nav_view/transcation_nav_view.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 import 'package:finance_tracker/src/controller/constant/images.dart';
@@ -86,11 +89,11 @@ class _NavBarViewState extends State<NavBarView> {
 
   List<Widget> _buildScreens() {
     return [
+      HomeNavView(),
+      TranscationNavView(),
       BudgetNavView(),
       BudgetNavView(),
-      BudgetNavView(),
-      BudgetNavView(),
-      BudgetNavView(),
+      PortfolioNavView(),
     ];
   }
 
