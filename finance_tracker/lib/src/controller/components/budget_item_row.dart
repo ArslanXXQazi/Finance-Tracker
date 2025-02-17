@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 class BudgetItemRow extends StatelessWidget {
 
   String name;
-  String limit;
-  String spent;
-  String remaining;
+  double limit;
+  double spent;
+  double remaining;
 
    BudgetItemRow({super.key,
      required this.name,
@@ -54,19 +54,19 @@ class BudgetItemRow extends StatelessWidget {
                 Row(
                   children: [
                     CustomText(text: 'Limit: '),
-                    CustomText(text: limit),
+                    CustomText(text: "$limit"),
                   ],
                 ),
                 Row(
                   children: [
                     CustomText(text: 'Spent: '),
-                    CustomText(text: spent,color: Colors.red,),
+                    CustomText(text: "$spent",color: Colors.red,),
                   ],
                 ),
                 Row(
                   children: [
                     CustomText(text: 'Remaining: '),
-                    CustomText(text: remaining,color: Colors.green,),
+                    CustomText(text: "$remaining",color: Colors.green,),
                   ],
                 ),
                 SizedBox(height: height*.003,),
