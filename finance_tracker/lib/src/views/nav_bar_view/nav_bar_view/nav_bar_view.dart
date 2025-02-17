@@ -41,6 +41,12 @@ class _NavBarViewState extends State<NavBarView> {
           items: [
 
 
+            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/home.png')),label: 'Home'),
+            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/home.png')),label: 'Home'),
+            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/home.png')),label: 'Home'),
+            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/home.png')),label: 'Home'),
+            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/home.png')),label: 'Home'),
+
             // BottomNavigationBarItem(icon: Icon(Icons.grid_view),label: 'Home'),
             // BottomNavigationBarItem(icon: Icon(Icons.receipt_long),label: 'Orders'),
             // BottomNavigationBarItem(icon: Icon(Icons.message_outlined),label: 'Inbox'),
