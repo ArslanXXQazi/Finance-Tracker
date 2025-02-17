@@ -11,9 +11,7 @@ class BudgetItemRow extends StatelessWidget {
 
    BudgetItemRow({super.key,
      required this.name,
-     required this.limit,
-     required this.spent,
-     required this.remaining,
+    
    });
 
   @override
