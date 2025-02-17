@@ -24,13 +24,7 @@ class BudgetItemRow extends StatelessWidget {
       padding:  EdgeInsets.symmetric(vertical: height*.015),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Expanded(
-              flex: 15,
-              child: Column(children: [
-                Container(
-                  height: height*.04,
+     
                   width: width*.1,
                   decoration: BoxDecoration(
                     color: Colors.grey.shade100,
