@@ -41,15 +41,15 @@ class PortfolioNavView extends StatelessWidget {
               ),
               child: Center(
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding:  EdgeInsets.symmetric(horizontal: width*.04,vertical: height*.02),
                   child: Column(
                     children: [
                     BoldText(text: 'Overview',),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                      CustomText(text: 'Financial health: '),
-                      CustomText(text: 'Good',color: Colors.green.shade800,),
+                      CustomText(text: 'Financial health: ',fontWeight: FontWeight.bold,),
+                      CustomText(text: 'Good',color: Colors.green.shade800,fontWeight: FontWeight.bold,),
                     ],),
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: height*.015),
@@ -76,17 +76,20 @@ class PortfolioNavView extends StatelessWidget {
                     BoldText(text: '₹10,00,000.00',fontSize: 22,),
                     Divider(),
                     Container(
-
                       width: width*1,
                       child: Row(children: [
-                        Expanded(child:  Column(children: [
+                        Expanded(
+                          flex:50,
+                            child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
                           Row(
-
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                             Container(
                               height: height*.015,
                               width: width*.03,
-                              color: Colors.cyan,
+                              color: Colors.lightBlueAccent.shade100,
                             ),
                             SizedBox(width: width*.02,),
                             CustomText(text: 'Assets',fontSize: 12,),
@@ -94,7 +97,7 @@ class PortfolioNavView extends StatelessWidget {
                             Container(
                               height: height*.015,
                               width: width*.03,
-                              color: Colors.cyan,
+                              color: Colors.lightBlueAccent,
                             ),
                             SizedBox(width: width*.02,),
                             CustomText(text: 'Liabilities',fontSize: 12,),
@@ -113,29 +116,34 @@ class PortfolioNavView extends StatelessWidget {
                             ),
                           )
                         ],)),
-                        Expanded(child: Column(
+                        SizedBox(width: width*.07,),
+                        Expanded(
+                          flex: 50,
+                            child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                           BoldText(text: 'Top Assets',fontSize: 16,),
+                          SizedBox(height: height*.01,),
                           Row(children: [
-                            Icon(Icons.circle,size: width*.03,),
+                            Icon(Icons.circle,size: width*.02,),
                             SizedBox(width: width*.02,),
                             CustomText(text: "Home"),
                           ],),
                             Row(children: [
-                              Icon(Icons.circle,size: width*.03,),
+                              Icon(Icons.circle,size: width*.02,),
                               SizedBox(width: width*.02,),
                               CustomText(text: "Home"),
                             ],),
+                            SizedBox(height: height*.01,),
                             BoldText(text: 'Top Liabilities',fontSize: 16,),
                             Row(children: [
-                              Icon(Icons.circle,size: width*.03,),
+                              Icon(Icons.circle,size: width*.02,),
                               SizedBox(width: width*.02,),
                               CustomText(text: "Home"),
                             ],),
                             Row(children: [
-                              Icon(Icons.circle,size: width*.03,),
+                              Icon(Icons.circle,size: width*.02,),
                               SizedBox(width: width*.02,),
                               CustomText(text: "Home"),
                             ],)
@@ -148,7 +156,8 @@ class PortfolioNavView extends StatelessWidget {
               ),
             ),
           ),
-        )
+        ),
+        Divider(),
       ],)
     );
   }
