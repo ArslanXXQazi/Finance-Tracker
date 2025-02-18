@@ -68,6 +68,7 @@ class _PortfolioNavViewState extends State<PortfolioNavView> with SingleTickerPr
                   padding:  EdgeInsets.symmetric(horizontal: width*.04,vertical: height*.02),
                   child: Column(
                     children: [
+                      
                     BoldText(text: 'Overview',),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -206,7 +207,7 @@ class _PortfolioNavViewState extends State<PortfolioNavView> with SingleTickerPr
           AssetsTapbar(),
           LiabilitiesTapbar(),
         ])),
-      ],)
+      ],).animate().fadeIn(duration: 1.seconds).slideY(),
     );
   }
 }
