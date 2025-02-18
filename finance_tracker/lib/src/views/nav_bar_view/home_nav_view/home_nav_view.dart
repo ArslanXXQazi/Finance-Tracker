@@ -87,9 +87,9 @@ class HomeNavView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                       CustomText(text: 'Cash'),
-                      CustomText(text: '5600.00'),
+                      CustomText(text: '₹5600.00',color: Colors.green,),
                       CustomText(text: 'Bank'),
-                      CustomText(text: '560038935.00'),
+                      CustomText(text: '₹56000.00',color: Colors.green,),
                     ],),
                   )
                 ],),

@@ -36,9 +36,9 @@ class UpComingPaymentRow extends StatelessWidget {
               CustomText(text: "$card",color: Colors.grey,),
             ],
           ),
-          CustomText(text: "$amount",color: Colors.red,),
+          BoldText(text: "$amount",color: Colors.red,fontSize: 14,),
           CustomText(text: '$payables_receivable',fontWeight: FontWeight.bold,),
-          CustomText(text: pay_rece_amount,color: color,),
+          BoldText(text: pay_rece_amount,color: color,fontSize: 14,),
 
         ],),
     );
