@@ -175,7 +175,7 @@ class PortfolioNavView extends StatelessWidget {
               SizedBox(width: width*.03,),
               CustomText(text: "House",fontWeight: FontWeight.bold,),
             ],),
-          
+            CustomText(text: '100,00,00.00',color: Colors.green,),
           ],)
       ],)
     );
