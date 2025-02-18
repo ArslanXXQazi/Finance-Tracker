@@ -136,17 +136,19 @@ class HomeNavView extends StatelessWidget {
                       amount: '5,000',
                     payables_receivable: 'Receivable',
                       pay_rece_amount: '7.5',
+                    color: Colors.green,
                   ),
-                   // Row(
-                   //   children: [
-                   //     Column(
-                   //       crossAxisAlignment: CrossAxisAlignment.start,
-                   //       children: [
-                   //         CustomText(text: '28 feb 2025'),
-                   //         CustomText(text: 'credit car'),
-                   //       ],
-                   //     ),
-                   //     CustomText(text: '2678.00',color: Colors.red,),],),
+                   Row(
+                     children: [
+                       Column(
+                         crossAxisAlignment: CrossAxisAlignment.start,
+                         children: [
+                           CustomText(text: '28 feb 2025'),
+                           CustomText(text: 'credit car',color: Colors.grey,),
+                         ],
+                       ),
+                       SizedBox(width: width*.13,),
+                       BoldText(text: '2678.00',color: Colors.red,fontSize: 14,),],),
                  ],),
                )
               ],),
