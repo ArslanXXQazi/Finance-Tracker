@@ -1,6 +1,8 @@
 
 
 import 'package:finance_tracker/src/controller/constant/linker.dart';
+import 'package:finance_tracker/src/views/nav_bar_view/portfolio_nav_view/assets_tapbar.dart';
+import 'package:finance_tracker/src/views/nav_bar_view/portfolio_nav_view/liabilities_tapbar.dart';
 
 class PortfolioNavView extends StatefulWidget {
   const PortfolioNavView({super.key});
@@ -198,35 +200,12 @@ class _PortfolioNavViewState extends State<PortfolioNavView> with SingleTickerPr
               ]
           ),
         ),
-        Expanded(child: TabBarView(children: [
-
-        ]))
-
-
-
-
-
-
-
-        // Row(
-        //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //   children: [
-        //     Row(children: [
-        //       Container(
-        //         height: height*.04,
-        //         width: width*.1,
-        //         decoration: BoxDecoration(
-        //           color: Colors.grey.shade100,
-        //           borderRadius: BorderRadius.circular(10),
-        //           border: Border.all(color: Colors.black,width: 2),
-        //         ),
-        //         child: Icon(Icons.shopping_cart_outlined),
-        //       ),
-        //       SizedBox(width: width*.03,),
-        //       CustomText(text: "House",fontWeight: FontWeight.bold,),
-        //     ],),
-        //     CustomText(text: '100,00,00.00',color: Colors.green,),
-        //   ],)
+        Expanded(child: TabBarView(
+          controller: tabController,
+            children: [
+          AssetsTapbar(),
+          LiabilitiesTapbar(),
+        ])),
       ],)
     );
   }
