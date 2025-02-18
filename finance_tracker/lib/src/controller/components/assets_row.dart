@@ -9,24 +9,27 @@ class AssetsRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final height=MediaQuery.sizeOf(context).height;
     final width=MediaQuery.sizeOf(context).width;
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Row(children: [
-          Container(
-            height: height*.04,
-            width: width*.1,
-            decoration: BoxDecoration(
-              color: Colors.grey.shade100,
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Colors.black,width: 2),
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: height*.015),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(children: [
+            Container(
+              height: height*.04,
+              width: width*.1,
+              decoration: BoxDecoration(
+                color: Colors.grey.shade100,
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: Colors.black,width: 2),
+              ),
+              child: Icon(Icons.shopping_cart_outlined),
             ),
-            child: Icon(Icons.shopping_cart_outlined),
-          ),
-          SizedBox(width: width*.03,),
-          CustomText(text: name,fontWeight: FontWeight.bold,),
+            SizedBox(width: width*.03,),
+            CustomText(text: name,fontWeight: FontWeight.bold,),
+          ],),
+          CustomText(text:amount,color: Colors.green,),
         ],),
-        CustomText(text:amount,color: Colors.green,),
-      ],);
+    );
   }
 }

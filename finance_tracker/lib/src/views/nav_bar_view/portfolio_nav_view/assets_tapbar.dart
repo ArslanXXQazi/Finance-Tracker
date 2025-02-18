@@ -12,24 +12,26 @@ class AssetsTapbar extends StatelessWidget {
       backgroundColor: Colors.grey.shade100,
       body:Padding(
         padding:  EdgeInsets.symmetric(horizontal:width*.03,vertical: height*.02),
-        child: Column(children: [
-          AssetsRow(
-              name: 'House',
-              amount: '10000000.00'
-          ),
-          AssetsRow(
-              name: 'House',
-              amount: '10000000.00'
-          ),
-          AssetsRow(
-              name: 'House',
-              amount: '10000000.00'
-          ),
-          AssetsRow(
-              name: 'House',
-              amount: '10000000.00'
-          ),
-        ],),
+        child: SingleChildScrollView(
+          child: Column(children: [
+            AssetsRow(
+                name: 'House',
+                amount: '10000000.00'
+            ),
+            AssetsRow(
+                name: 'Stocks',
+                amount: '25000.00'
+            ),
+            AssetsRow(
+                name: 'Car',
+                amount: '500000.00'
+            ),
+            AssetsRow(
+                name: 'Cash & Bank',
+                amount: '10000000.00'
+            ),
+          ],),
+        ),
       )
     );
   }
