@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class BouncingText extends StatefulWidget {
   final String text;
+  final double fontSize; // <-- Font size parameter
 
-  BouncingText(this.text);
+  BouncingText(this.text, {this.fontSize = 35}); // <-- Default font size
 
   @override
   _BouncingTextState createState() => _BouncingTextState();
@@ -58,7 +59,10 @@ class _BouncingTextState extends State<BouncingText>
               offset: Offset(0, offset),
               child: Text(
                 letter,
-                style: TextStyle(fontSize: 35,fontWeight: FontWeight.w900),
+                style: TextStyle(
+                  fontSize: widget.fontSize, // <-- Dynamic font size
+                  fontWeight: FontWeight.w900,
+                ),
               ),
             );
           },

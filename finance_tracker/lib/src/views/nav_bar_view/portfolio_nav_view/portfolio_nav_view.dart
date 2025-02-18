@@ -1,5 +1,6 @@
 
 
+import 'package:finance_tracker/src/controller/components/bouncing_text.dart';
 import 'package:finance_tracker/src/controller/constant/linker.dart';
 import 'package:finance_tracker/src/views/nav_bar_view/portfolio_nav_view/assets_tapbar.dart';
 import 'package:finance_tracker/src/views/nav_bar_view/portfolio_nav_view/liabilities_tapbar.dart';
@@ -68,8 +69,8 @@ class _PortfolioNavViewState extends State<PortfolioNavView> with SingleTickerPr
                   padding:  EdgeInsets.symmetric(horizontal: width*.04,vertical: height*.02),
                   child: Column(
                     children: [
-                      
-                    BoldText(text: 'Overview',),
+                    BouncingText('Overview',fontSize: 20,),
+                   // BoldText(text: 'Overview',),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
