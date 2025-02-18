@@ -47,12 +47,28 @@ class PortfolioNavView extends StatelessWidget {
                   CustomText(text: 'Financial health: '),
                   CustomText(text: 'Good',color: Colors.green.shade800,),
                 ],),
-                Row(children: [
-                  Row(children: [
-                    CustomText(text: '1M:'),
-                    ImageIcon(AssetImage(Appimages.up)),
-                  ],)
-                ],)
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: height*.02),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                    Row(children: [
+                      CustomText(text: '1M:'),
+                      ImageIcon(AssetImage(Appimages.up),size: width*.03,color: Colors.green,),
+                      CustomText(text: '1.6M%'),
+                    ],),
+                    Row(children: [
+                      CustomText(text: '6M:'),
+                      ImageIcon(AssetImage(Appimages.up),size: width*.03,color: Colors.green,),
+                      CustomText(text: '2.5%'),
+                    ],),
+                    Row(children: [
+                      CustomText(text: '1Y:'),
+                      ImageIcon(AssetImage(Appimages.down),size: width*.03,color: Colors.red,),
+                      CustomText(text: '3.6M%'),
+                    ],)
+                  ],),
+                )
               ],),
             ),
           ),
