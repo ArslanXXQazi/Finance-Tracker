@@ -1,5 +1,6 @@
 import 'package:finance_tracker/src/controller/components/chart.dart';
 import 'package:finance_tracker/src/controller/components/custom_text.dart';
+import 'package:finance_tracker/src/controller/components/percentage_container.dart';
 import 'package:finance_tracker/src/controller/constant/images.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
@@ -55,33 +56,7 @@ class HomeNavView extends StatelessWidget {
               child:   FinancialChart(),),
             Expanded(
               flex: 30,
-                child:Column(
-                  children: [
-                  Container(
-                    height: height*.14,
-                    width: width*1,
-                   decoration: BoxDecoration(
-                     gradient: LinearGradient(
-                       colors: [
-                        Colors.lightGreenAccent,
-                        Colors.green.shade300,
-                       ]
-                     ),
-                     borderRadius: BorderRadius.circular(20),
-                   ),
-                    child: Center(
-                      child: Container(
-                        height: height*.12,
-                        width: width*.25,
-                       decoration: BoxDecoration(
-                         borderRadius: BorderRadius.circular(20),
-                         color: Colors.green.shade700
-                       ),
-                        child: Center(child: CustomText(text: '56%',color: Colors.white,fontSize: 30,),),
-                      ),
-                    ),
-                  )
-                ],)),
+                child:PercentageContainer(percentage: '56%')),
           ],)
         ],),
       ),
