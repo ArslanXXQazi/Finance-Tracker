@@ -40,86 +40,111 @@ class PortfolioNavView extends StatelessWidget {
                 border: Border.all(color: Colors.grey),
               ),
               child: Center(
-                child: Column(
-                  children: [
-                  BoldText(text: 'Overview',),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
                     children: [
-                    CustomText(text: 'Financial health: '),
-                    CustomText(text: 'Good',color: Colors.green.shade800,),
-                  ],),
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: height*.015),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    BoldText(text: 'Overview',),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                      Row(children: [
-                        CustomText(text: '1M:'),
-                        ImageIcon(AssetImage(Appimages.up),size: width*.03,color: Colors.green,),
-                        CustomText(text: '1.6M%'),
-                      ],),
-                      Row(children: [
-                        CustomText(text: '6M:'),
-                        ImageIcon(AssetImage(Appimages.up),size: width*.03,color: Colors.green,),
-                        CustomText(text: '2.5%'),
-                      ],),
-                      Row(children: [
-                        CustomText(text: '1Y:'),
-                        ImageIcon(AssetImage(Appimages.down),size: width*.03,color: Colors.red,),
-                        CustomText(text: '3.6M%'),
-                      ],)
+                      CustomText(text: 'Financial health: '),
+                      CustomText(text: 'Good',color: Colors.green.shade800,),
                     ],),
-                  ),
-                  BoldText(text: '₹10,00,000.00',fontSize: 22,),
-                  Divider(),
-                  Container(
-
-                    width: width*1,
-                    child: Row(children: [
-                      Expanded(child:  Column(children: [
-                        SizedBox(
-                          height: width*.25,
-                          width: width*.25,
-                          child: CircularProgressIndicator(
-                            value:.7,
-                            valueColor: AlwaysStoppedAnimation<Color>(Colors.lightBlueAccent),
-                            backgroundColor: Colors.lightBlueAccent.shade100,
-                            strokeWidth: width*.09,
-                          ).animate().flipH(duration: 5.seconds),
-                        )
-                      ],)),
-                      Expanded(child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: height*.015),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                        BoldText(text: 'Top Assets',fontSize: 16,),
                         Row(children: [
-                          Icon(Icons.circle,size: width*.03,),
-                          SizedBox(width: width*.02,),
-                          CustomText(text: "Home"),
+                          CustomText(text: '1M:'),
+                          ImageIcon(AssetImage(Appimages.up),size: width*.03,color: Colors.green,),
+                          CustomText(text: '1.6M%'),
                         ],),
-                          Row(children: [
-                            Icon(Icons.circle,size: width*.03,),
+                        Row(children: [
+                          CustomText(text: '6M:'),
+                          ImageIcon(AssetImage(Appimages.up),size: width*.03,color: Colors.green,),
+                          CustomText(text: '2.5%'),
+                        ],),
+                        Row(children: [
+                          CustomText(text: '1Y:'),
+                          ImageIcon(AssetImage(Appimages.down),size: width*.03,color: Colors.red,),
+                          CustomText(text: '3.6M%'),
+                        ],)
+                      ],),
+                    ),
+                    BoldText(text: '₹10,00,000.00',fontSize: 22,),
+                    Divider(),
+                    Container(
+
+                      width: width*1,
+                      child: Row(children: [
+                        Expanded(child:  Column(children: [
+                          Row(
+
+                            children: [
+                            Container(
+                              height: height*.015,
+                              width: width*.03,
+                              color: Colors.cyan,
+                            ),
                             SizedBox(width: width*.02,),
-                            CustomText(text: "Home"),
+                            CustomText(text: 'Assets',fontSize: 12,),
+                              SizedBox(width: width*.02,),
+                            Container(
+                              height: height*.015,
+                              width: width*.03,
+                              color: Colors.cyan,
+                            ),
+                            SizedBox(width: width*.02,),
+                            CustomText(text: 'Liabilities',fontSize: 12,),
                           ],),
+                          Padding(
+                            padding:  EdgeInsets.only(top: height*.03),
+                            child: SizedBox(
+                              height: width*.25,
+                              width: width*.25,
+                              child: CircularProgressIndicator(
+                                value:.7,
+                                valueColor: AlwaysStoppedAnimation<Color>(Colors.lightBlueAccent),
+                                backgroundColor: Colors.lightBlueAccent.shade100,
+                                strokeWidth: width*.09,
+                              ).animate().flipH(duration: 5.seconds),
+                            ),
+                          )
+                        ],)),
+                        Expanded(child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
                           BoldText(text: 'Top Assets',fontSize: 16,),
                           Row(children: [
                             Icon(Icons.circle,size: width*.03,),
                             SizedBox(width: width*.02,),
                             CustomText(text: "Home"),
                           ],),
-                          Row(children: [
-                            Icon(Icons.circle,size: width*.03,),
-                            SizedBox(width: width*.02,),
-                            CustomText(text: "Home"),
-                          ],)
-                      ],))
-                    ],),
+                            Row(children: [
+                              Icon(Icons.circle,size: width*.03,),
+                              SizedBox(width: width*.02,),
+                              CustomText(text: "Home"),
+                            ],),
+                            BoldText(text: 'Top Liabilities',fontSize: 16,),
+                            Row(children: [
+                              Icon(Icons.circle,size: width*.03,),
+                              SizedBox(width: width*.02,),
+                              CustomText(text: "Home"),
+                            ],),
+                            Row(children: [
+                              Icon(Icons.circle,size: width*.03,),
+                              SizedBox(width: width*.02,),
+                              CustomText(text: "Home"),
+                            ],)
+                        ],))
+                      ],),
 
-                  )
-                ],),
+                    )
+                  ],),
+                ),
               ),
             ),
           ),
