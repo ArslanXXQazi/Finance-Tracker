@@ -74,20 +74,28 @@ class PortfolioNavView extends StatelessWidget {
                   BoldText(text: '₹10,00,000.00',fontSize: 22,),
                   Divider(),
                   Container(
-                   // height: height*.2,
+
                     width: width*1,
                     child: Row(children: [
-                      Expanded(child:  SizedBox(
-                        height: width*.15,
-                        width: width*.15,
-                        child: CircularProgressIndicator(
-                          value:.7,
-                          valueColor: AlwaysStoppedAnimation<Color>(Colors.lightBlueAccent),
-                          backgroundColor: Colors.lightBlueAccent.shade100,
-                          strokeWidth: width*.05,
-
-                        ),//.animate().flipH(duration: 7.seconds),
-                      ))
+                      Expanded(child:  Column(children: [
+                        SizedBox(
+                          height: width*.25,
+                          width: width*.25,
+                          child: CircularProgressIndicator(
+                            value:.7,
+                            valueColor: AlwaysStoppedAnimation<Color>(Colors.lightBlueAccent),
+                            backgroundColor: Colors.lightBlueAccent.shade100,
+                            strokeWidth: width*.09,
+                          ).animate().flipH(duration: 5.seconds),
+                        )
+                      ],)),
+                      Expanded(child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                        BoldText(text: 'Top Assets',fontSize: 16,),
+                          
+                      ],))
                     ],),
 
                   )
