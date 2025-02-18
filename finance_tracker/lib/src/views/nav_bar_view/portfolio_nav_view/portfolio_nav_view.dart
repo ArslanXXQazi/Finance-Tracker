@@ -31,7 +31,7 @@ class PortfolioNavView extends StatelessWidget {
       body: Column(children: [
         Center(
           child: Container(
-            height: height*.3,
+            height: height*.4,
             width: width*.8,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
