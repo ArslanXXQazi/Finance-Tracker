@@ -1,3 +1,4 @@
+import 'package:finance_tracker/src/controller/components/assets_row.dart';
 import 'package:finance_tracker/src/controller/constant/linker.dart';
 
 class AssetsTapbar extends StatelessWidget {
@@ -12,7 +13,22 @@ class AssetsTapbar extends StatelessWidget {
       body:Padding(
         padding:  EdgeInsets.symmetric(horizontal:width*.03,vertical: height*.02),
         child: Column(children: [
-          
+          AssetsRow(
+              name: 'House',
+              amount: '10000000.00'
+          ),
+          AssetsRow(
+              name: 'House',
+              amount: '10000000.00'
+          ),
+          AssetsRow(
+              name: 'House',
+              amount: '10000000.00'
+          ),
+          AssetsRow(
+              name: 'House',
+              amount: '10000000.00'
+          ),
         ],),
       )
     );
