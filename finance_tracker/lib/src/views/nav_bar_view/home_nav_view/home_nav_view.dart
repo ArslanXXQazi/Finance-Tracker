@@ -48,13 +48,40 @@ class HomeNavView extends StatelessWidget {
                 )
             ],)),
           ],),
-          Row(children: [
+          Row(
+            children: [
             Expanded(
               flex: 70,
               child:   FinancialChart(),),
             Expanded(
               flex: 30,
-                child: Container()),
+                child:Column(
+                  children: [
+                  Container(
+                    height: height*.14,
+                    width: width*1,
+                   decoration: BoxDecoration(
+                     gradient: LinearGradient(
+                       colors: [
+                        Colors.lightGreenAccent,
+                        Colors.green.shade300,
+                       ]
+                     ),
+                     borderRadius: BorderRadius.circular(20),
+                   ),
+                    child: Center(
+                      child: Container(
+                        height: height*.12,
+                        width: width*.25,
+                       decoration: BoxDecoration(
+                         borderRadius: BorderRadius.circular(20),
+                         color: Colors.green.shade700
+                       ),
+                        child: Center(child: CustomText(text: '56%',color: Colors.white,fontSize: 30,),),
+                      ),
+                    ),
+                  )
+                ],)),
           ],)
         ],),
       ),
