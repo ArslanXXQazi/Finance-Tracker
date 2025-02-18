@@ -56,6 +56,7 @@ class HomeNavView extends StatelessWidget {
               ],)),
             ],),
               //===============================>>>Row For Chart
+              SizedBox(height: height*.01,),
             Row(
               children: [
               Expanded(
@@ -95,10 +96,10 @@ class HomeNavView extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                        CustomText(text: 'Cash'),
-                        CustomText(text: '₹5600.00',color: Colors.green,),
-                        CustomText(text: 'Bank'),
-                        CustomText(text: '₹56000.00',color: Colors.green,),
+                        CustomText(text: 'Cash',fontWeight: FontWeight.bold,),
+                        CustomText(text: '₹5600.00',color: Colors.green,fontWeight: FontWeight.bold),
+                        CustomText(text: 'Bank',fontWeight: FontWeight.bold),
+                        CustomText(text: '₹56000.00',color: Colors.green,fontWeight: FontWeight.bold),
                       ],),
                     )
                   ],),
