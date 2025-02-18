@@ -11,5 +11,7 @@ class Appimages
   static String transaction='assets/transaction.png';
   static String cart='assets/cart.png';
   static String arrow='assets/arrow.png';
+  static String up='assets/up.png';
+  static String down='assets/down.png';
 
 }
