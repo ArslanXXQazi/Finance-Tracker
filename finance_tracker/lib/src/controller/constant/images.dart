@@ -10,5 +10,6 @@ class Appimages
   static String search='assets/search.png';
   static String transaction='assets/transaction.png';
   static String cart='assets/cart.png';
+  static String arrow='assets/arrow.png';
 
 }
