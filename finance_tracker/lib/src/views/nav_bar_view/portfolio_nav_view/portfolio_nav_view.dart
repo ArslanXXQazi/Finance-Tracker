@@ -189,7 +189,7 @@ class _PortfolioNavViewState extends State<PortfolioNavView> with SingleTickerPr
            indicatorWeight: 2,
             indicatorSize: TabBarIndicatorSize.tab,
             indicator: BoxDecoration(
-              color: Colors.grey.shade400,
+              color: Colors.grey.shade300,
               borderRadius: BorderRadius.circular(10),
             ),
               tabs:
