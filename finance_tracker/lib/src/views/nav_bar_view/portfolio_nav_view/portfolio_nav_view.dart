@@ -94,7 +94,11 @@ class PortfolioNavView extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                         BoldText(text: 'Top Assets',fontSize: 16,),
-                          
+                        Row(children: [
+                          Icon(Icons.circle,size: width*.03,),
+                          SizedBox(width: width*.02,),
+                          CustomText(text: "Home"),
+                        ],)
                       ],))
                     ],),
 
