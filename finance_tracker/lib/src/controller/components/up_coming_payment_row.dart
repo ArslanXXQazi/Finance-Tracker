@@ -32,13 +32,13 @@ class UpComingPaymentRow extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CustomText(text: "$date"),
-              CustomText(text: "$card",color: Colors.grey,),
+              CustomText(text: "$date",fontWeight: FontWeight.bold),
+              CustomText(text: "$card",color: Colors.grey,fontWeight: FontWeight.bold),
             ],
           ),
-          BoldText(text: "$amount",color: Colors.red,fontSize: 14,),
+          BoldText(text: "$amount",color: Colors.red,fontSize: 14,fontWeight: FontWeight.bold),
           CustomText(text: '$payables_receivable',fontWeight: FontWeight.bold,),
-          BoldText(text: pay_rece_amount,color: color,fontSize: 14,),
+          BoldText(text: pay_rece_amount,color: color,fontSize: 14,fontWeight: FontWeight.bold),
 
         ],),
     );

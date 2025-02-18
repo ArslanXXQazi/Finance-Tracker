@@ -113,7 +113,7 @@ class HomeNavView extends StatelessWidget {
                        //   height: height*.2,
                 width: width*1,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
+                  borderRadius: BorderRadius.circular(10),
                   border: Border.all(color: Colors.grey.shade400),
                 ),
                 child: Column(children: [
@@ -158,7 +158,7 @@ class HomeNavView extends StatelessWidget {
                              CustomText(text: 'credit car',color: Colors.grey,fontWeight: FontWeight.bold),
                            ],
                          ),
-                         SizedBox(width: width*.13,),
+                         SizedBox(width: width*.12,),
                          BoldText(text: '₹2678.00',color: Colors.red,fontSize: 14,fontWeight: FontWeight.bold),],),
                    ],),
                  )
@@ -168,76 +168,79 @@ class HomeNavView extends StatelessWidget {
               //===============================>>>Container For Last 30 Days
             Padding(
               padding:  EdgeInsets.symmetric(vertical: height*.02),
-              child: Container(
-                width: width*1,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  border: Border.all(color: Colors.grey.shade400)
-                ),
-               child: Column(
-                 children: [
-                   Padding(
-                     padding:  EdgeInsets.symmetric(vertical: height*.005,horizontal: width*.02),
-                     child: Row(
-                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                       children: [
-                         BoldText(text: "Last 30 days",fontSize: 16,),
-                         InkWell(
-                             onTap: (){},
-                             child: ImageIcon(AssetImage(Appimages.arrow),color: Colors.grey,size: width*.06,)),
-                       ],),
-                   ),
-                   Divider(),
-                   Padding(
-                     padding: EdgeInsets.symmetric(vertical: height*.02,horizontal: width*.02),
-                     child: Row(
-                       children: [
-                       Expanded(
-                           flex:25,
-                           child:  Column(
-                             mainAxisAlignment: MainAxisAlignment.center,
-                             children: [
-                             SizedBox(
-                               height: width*.15,
-                               width: width*.15,
-                               child: CircularProgressIndicator(
-                                 value:.7,
-                                 valueColor: AlwaysStoppedAnimation<Color>(Colors.lightBlueAccent),
-                                 backgroundColor: Colors.lightBlueAccent.shade100,
-                                 strokeWidth: width*.05,
+              child: Card(
+                color: Colors.grey.shade100,
+                child: Container(
+                  width: width*1,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Colors.grey.shade400)
+                  ),
+                 child: Column(
+                   children: [
+                     Padding(
+                       padding:  EdgeInsets.symmetric(vertical: height*.005,horizontal: width*.02),
+                       child: Row(
+                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                         children: [
+                           BoldText(text: "Last 30 days",fontSize: 16,),
+                           InkWell(
+                               onTap: (){},
+                               child: ImageIcon(AssetImage(Appimages.arrow),color: Colors.grey,size: width*.06,)),
+                         ],),
+                     ),
+                     Divider(),
+                     Padding(
+                       padding: EdgeInsets.symmetric(vertical: height*.02,horizontal: width*.02),
+                       child: Row(
+                         children: [
+                         Expanded(
+                             flex:25,
+                             child:  Column(
+                               mainAxisAlignment: MainAxisAlignment.center,
+                               children: [
+                               SizedBox(
+                                 height: width*.15,
+                                 width: width*.15,
+                                 child: CircularProgressIndicator(
+                                   value:.7,
+                                   valueColor: AlwaysStoppedAnimation<Color>(Colors.lightBlueAccent),
+                                   backgroundColor: Colors.lightBlueAccent.shade100,
+                                   strokeWidth: width*.05,
 
-                               ).animate().flipH(),
-                             )
-                           ],)),
-                       SizedBox(width: width*.02,),
-                       Expanded(
-                         flex: 75,
-                           child: Column(children: [
-                             Row(
-                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                               children: [
-                               CustomText(text: 'Incoming',fontWeight: FontWeight.bold,),
-                               CustomText(text: '1500.00',color: Colors.green,fontWeight: FontWeight.bold,),
-                             ],),
-                             SizedBox(height: height*.01,),
-                             Row(
-                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                               children: [
-                                 CustomText(text: 'Expanse',fontWeight: FontWeight.bold,),
-                                 CustomText(text: '100.00',color: Colors.red,fontWeight: FontWeight.bold,),
+                                 ).animate().flipH(),
+                               )
+                             ],)),
+                         SizedBox(width: width*.02,),
+                         Expanded(
+                           flex: 75,
+                             child: Column(children: [
+                               Row(
+                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                 children: [
+                                 CustomText(text: 'Incoming',fontWeight: FontWeight.bold,),
+                                 CustomText(text: '₹1500.00',color: Colors.green,fontWeight: FontWeight.bold,),
                                ],),
-                             Divider(),
-                             Row(
-                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                               children: [
-                                 CustomText(text: 'Savings',fontWeight: FontWeight.bold,),
-                                 CustomText(text: '1500.00',color: Colors.green,fontWeight: FontWeight.bold,),
-                               ],),
-                       ],))
-                     ],),
-                   ),
-                 ],
-               ),
+                               SizedBox(height: height*.01,),
+                               Row(
+                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                 children: [
+                                   CustomText(text: 'Expanse',fontWeight: FontWeight.bold,),
+                                   CustomText(text: '₹100.00',color: Colors.red,fontWeight: FontWeight.bold,),
+                                 ],),
+                               Divider(),
+                               Row(
+                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                 children: [
+                                   CustomText(text: 'Savings',fontWeight: FontWeight.bold,),
+                                   CustomText(text: '₹1400.00',color: Colors.green,fontWeight: FontWeight.bold,),
+                                 ],),
+                         ],))
+                       ],),
+                     ),
+                   ],
+                 ),
+                ),
               ),
             ),
               //===============================>>>Button For Add
