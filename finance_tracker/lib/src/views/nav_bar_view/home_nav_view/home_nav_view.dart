@@ -1,5 +1,7 @@
+import 'package:finance_tracker/src/controller/components/chart.dart';
 import 'package:finance_tracker/src/controller/components/custom_text.dart';
 import 'package:finance_tracker/src/controller/constant/images.dart';
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
 class HomeNavView extends StatelessWidget {
@@ -45,6 +47,14 @@ class HomeNavView extends StatelessWidget {
                   child: Icon(Icons.settings,color: Colors.white,),
                 )
             ],)),
+          ],),
+          Row(children: [
+            Expanded(
+              flex: 70,
+              child:   FinancialChart(),),
+            Expanded(
+              flex: 30,
+                child: Container()),
           ],)
         ],),
       ),
