@@ -1,11 +1,5 @@
-import 'package:finance_tracker/src/controller/components/chart.dart';
-import 'package:finance_tracker/src/controller/components/custom_text.dart';
-import 'package:finance_tracker/src/controller/components/percentage_container.dart';
-import 'package:finance_tracker/src/controller/components/up_coming_payment_row.dart';
-import 'package:finance_tracker/src/controller/constant/images.dart';
-import 'package:fl_chart/fl_chart.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
+
+import 'package:finance_tracker/src/controller/constant/linker.dart';
 
 class HomeNavView extends StatelessWidget {
   const HomeNavView({super.key});
@@ -22,9 +16,13 @@ class HomeNavView extends StatelessWidget {
        // backgroundColor: Colors.grey.shade100,
         title: CustomText(text: 'NetWorth+',fontSize: 22,color: Colors.green.shade900,fontWeight: FontWeight.bold,),
         actions: [
-          ImageIcon(AssetImage(Appimages.scanner),size: width*.075),
+          InkWell(
+            onTap: (){},
+              child: ImageIcon(AssetImage(Appimages.scanner),size: width*.075)),
           SizedBox(width: width*.04,),
-          ImageIcon(AssetImage(Appimages.more),size: width*.09),
+          InkWell(
+            onTap: (){},
+              child: ImageIcon(AssetImage(Appimages.more),size: width*.09)),
         ],
       ),
       body: Padding(
@@ -208,7 +206,7 @@ class HomeNavView extends StatelessWidget {
                                    backgroundColor: Colors.lightBlueAccent.shade100,
                                    strokeWidth: width*.05,
 
-                                 ).animate().flipH(),
+                                 ).animate().flipH(duration: 7.seconds),
                                )
                              ],)),
                          SizedBox(width: width*.02,),

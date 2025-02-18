@@ -1,10 +1,5 @@
-import 'package:finance_tracker/src/controller/components/budget_item_row.dart';
-import 'package:finance_tracker/src/controller/components/custom_text.dart';
-import 'package:finance_tracker/src/controller/components/non_budgeted_row.dart';
-import 'package:finance_tracker/src/controller/constant/images.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
+
+import 'package:finance_tracker/src/controller/constant/linker.dart';
 
 class BudgetNavView extends StatelessWidget {
   const BudgetNavView({super.key});
@@ -19,11 +14,17 @@ class BudgetNavView extends StatelessWidget {
         backgroundColor: Colors.grey.shade100,
         title: CustomText(text: 'Budget',fontSize: 22,),
         actions: [
-          ImageIcon(AssetImage(Appimages.search),size: width*.09,),
+          InkWell(
+            onTap: (){},
+              child: ImageIcon(AssetImage(Appimages.search),size: width*.09,)),
           SizedBox(width: width*.05,),
-          ImageIcon(AssetImage(Appimages.scanner),size: width*.075),
+          InkWell(
+            onTap: (){},
+              child: ImageIcon(AssetImage(Appimages.scanner),size: width*.075)),
           SizedBox(width: width*.04,),
-          ImageIcon(AssetImage(Appimages.more),size: width*.09),
+          InkWell(
+            onTap: (){},
+              child: ImageIcon(AssetImage(Appimages.more),size: width*.09)),
         ],
       ),
       body: SingleChildScrollView(
@@ -58,19 +59,19 @@ class BudgetNavView extends StatelessWidget {
               ),
             ],
           ),
-         Divider(),
+          Divider(),
           Padding(
             padding:  EdgeInsets.symmetric(horizontal: width*.03),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
              children: [
-             Padding(
+               Padding(
                padding:  EdgeInsets.symmetric(vertical: height*.01),
                child: BoldText(text: 'Budgeted for Feb, 2025'),
              ),
                Divider(),
                //===========================================>>>>Row For Dining
-              BudgetItemRow(
+               BudgetItemRow(
                   name: "Dining",
                   limit: 1000.00,
                   spent: 256,
@@ -99,7 +100,6 @@ class BudgetNavView extends StatelessWidget {
                NonBudgetedRow(onTap: (){}, name: "Home"),
              ],),
           )
-
         ],).animate().fadeIn(duration: 1.seconds).slideY(),
       ),
     );
