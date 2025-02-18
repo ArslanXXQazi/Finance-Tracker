@@ -98,7 +98,7 @@ class HomeNavView extends StatelessWidget {
 
 
           Container(
-            height: height*.2,
+         //   height: height*.2,
             width: width*1,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -115,17 +115,51 @@ class HomeNavView extends StatelessWidget {
                   ],),
               ),
               Divider(),
-              Row(children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    CustomText(text: '28 feb 2025'),
-                    CustomText(text: 'credit car'),
-                  ],
-                ),
-                CustomText(text: '2678.00',color: Colors.red,),
+             Padding(
+               padding:  EdgeInsets.symmetric(vertical: height*.01,horizontal: width*.02),
+               child: Column(children: [
+                 Row(
+                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   children: [
+                     Column(
+                       crossAxisAlignment: CrossAxisAlignment.start,
+                       children: [
+                         CustomText(text: '28 feb 2025'),
+                         CustomText(text: 'credit car'),
+                       ],
+                     ),
+                     CustomText(text: '2678.00',color: Colors.red,),
+                     CustomText(text: 'Payables',color: Colors.red,),
+                     CustomText(text: '2678.00',color: Colors.red,),
 
-              ],)
+                   ],),
+                 Row(
+                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   children: [
+                     Column(
+                       crossAxisAlignment: CrossAxisAlignment.start,
+                       children: [
+                         CustomText(text: '28 feb 2025'),
+                         CustomText(text: 'credit car'),
+                       ],
+                     ),
+                     CustomText(text: '2678.00',color: Colors.red,),
+                     CustomText(text: 'Receviables',color: Colors.red,),
+                     CustomText(text: '2678.00',color: Colors.red,),
+
+                   ],),
+                 Row(
+                   children: [
+                     Column(
+                       crossAxisAlignment: CrossAxisAlignment.start,
+                       children: [
+                         CustomText(text: '28 feb 2025'),
+                         CustomText(text: 'credit car'),
+                       ],
+                     ),
+                     CustomText(text: '2678.00',color: Colors.red,),],),
+               ],),
+             )
             ],),
           )
         ],),
