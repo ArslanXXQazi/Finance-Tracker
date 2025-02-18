@@ -105,13 +105,27 @@ class HomeNavView extends StatelessWidget {
               border: Border.all(color: Colors.grey),
             ),
             child: Column(children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  BoldText(text: "Available Balance",fontSize: 16,),
-                  Icon(Icons.arrow_forward),
-                ],),
-              Divider()
+              Padding(
+                padding:  EdgeInsets.symmetric(vertical: height*.005,horizontal: width*.02),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    BoldText(text: "Upcoming Payments",fontSize: 16,),
+                    Icon(Icons.arrow_forward),
+                  ],),
+              ),
+              Divider(),
+              Row(children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CustomText(text: '28 feb 2025'),
+                    CustomText(text: 'credit car'),
+                  ],
+                ),
+                CustomText(text: '2678.00',color: Colors.red,),
+
+              ],)
             ],),
           )
         ],),
