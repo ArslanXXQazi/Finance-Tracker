@@ -29,7 +29,13 @@ class PortfolioNavView extends StatelessWidget {
         ],
       ),
       body: Column(children: [
-        
+        Container(
+          height: height*3,
+          width: width*.8,
+          decoration: BoxDecoration(
+            
+          ),
+        )
       ],)
     );
   }
