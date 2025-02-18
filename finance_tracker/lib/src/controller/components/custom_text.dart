@@ -8,7 +8,7 @@ class CustomText extends StatelessWidget {
    CustomText({super.key,
      required this.text,
      this.color=Colors.black,
-     this.fontWeight=FontWeight.normal,
+     this.fontWeight=FontWeight.bold,
      this.fontSize=14,
    });
 

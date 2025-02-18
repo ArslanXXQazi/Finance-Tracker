@@ -42,8 +42,9 @@ class PortfolioNavView extends StatelessWidget {
                 children: [
                 BoldText(text: 'Overview',),
                 Row(children: [
-                  CustomText(text: 'Financial health: ')
-                ],)  
+                  CustomText(text: 'Financial health: '),
+                  CustomText(text: 'Good',color: Colors.green,),
+                ],)
               ],),
             ),
           ),
