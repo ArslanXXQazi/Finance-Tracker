@@ -154,12 +154,12 @@ class HomeNavView extends StatelessWidget {
                          Column(
                            crossAxisAlignment: CrossAxisAlignment.start,
                            children: [
-                             CustomText(text: '28 feb 2025'),
-                             CustomText(text: 'credit car',color: Colors.grey,),
+                             CustomText(text: '28 feb 2025',fontWeight: FontWeight.bold,),
+                             CustomText(text: 'credit car',color: Colors.grey,fontWeight: FontWeight.bold),
                            ],
                          ),
                          SizedBox(width: width*.13,),
-                         BoldText(text: '₹2678.00',color: Colors.red,fontSize: 14,),],),
+                         BoldText(text: '₹2678.00',color: Colors.red,fontSize: 14,fontWeight: FontWeight.bold),],),
                    ],),
                  )
                 ],),
