@@ -158,6 +158,25 @@ class PortfolioNavView extends StatelessWidget {
           ),
         ),
         Divider(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(children: [
+              Container(
+                height: height*.04,
+                width: width*.1,
+                decoration: BoxDecoration(
+                  color: Colors.grey.shade100,
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: Colors.black,width: 2),
+                ),
+                child: Icon(Icons.shopping_cart_outlined),
+              ),
+              SizedBox(width: width*.03,),
+              CustomText(text: "House",fontWeight: FontWeight.bold,),
+            ],),
+           CustomText(text: '100,00,00.00',color: Colors.green,),
+          ],)
       ],)
     );
   }
