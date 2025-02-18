@@ -20,33 +20,34 @@ class HomeNavView extends StatelessWidget {
           ImageIcon(AssetImage(Appimages.more),size: width*.09),
         ],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-        Divider(),
-        Row(
-
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal:width*.03),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-          Expanded(
-             flex: 85,
-              child: Column(
-
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-            BoldText(text: 'Total net worth :',fontSize: 22,),
-            BoldText(text: '₹10,00,000.00',fontSize: 22,),
-          ],)),
-          Expanded(
-            flex: 15,
-              child: Column(children: [
-              CircleAvatar(
-                backgroundColor: Colors.green,
-                radius: width*.04,
-                child: Icon(Icons.settings,color: Colors.white,),
-              )
-          ],)),
-        ],)  
-      ],),
+          Divider(),
+          Row(
+            children: [
+            Expanded(
+               flex: 85,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+              BoldText(text: 'Total net worth :',fontSize: 22,),
+              BoldText(text: '₹10,00,000.00',fontSize: 22,),
+            ],)),
+            Expanded(
+              flex: 15,
+                child: Column(children: [
+                CircleAvatar(
+                  backgroundColor: Colors.green.shade800,
+                  radius: width*.04,
+                  child: Icon(Icons.settings,color: Colors.white,),
+                )
+            ],)),
+          ],)
+        ],),
+      ),
     );
   }
 }
