@@ -37,6 +37,15 @@ class PortfolioNavView extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: Colors.grey),
             ),
+            child: Center(
+              child: Column(
+                children: [
+                BoldText(text: 'Overview',),
+                Row(children: [
+                  CustomText(text: 'Financial health: ')
+                ],)  
+              ],),
+            ),
           ),
         )
       ],)
