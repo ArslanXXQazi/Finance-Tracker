@@ -98,7 +98,23 @@ class PortfolioNavView extends StatelessWidget {
                           Icon(Icons.circle,size: width*.03,),
                           SizedBox(width: width*.02,),
                           CustomText(text: "Home"),
-                        ],)
+                        ],),
+                          Row(children: [
+                            Icon(Icons.circle,size: width*.03,),
+                            SizedBox(width: width*.02,),
+                            CustomText(text: "Home"),
+                          ],),
+                          BoldText(text: 'Top Assets',fontSize: 16,),
+                          Row(children: [
+                            Icon(Icons.circle,size: width*.03,),
+                            SizedBox(width: width*.02,),
+                            CustomText(text: "Home"),
+                          ],),
+                          Row(children: [
+                            Icon(Icons.circle,size: width*.03,),
+                            SizedBox(width: width*.02,),
+                            CustomText(text: "Home"),
+                          ],)
                       ],))
                     ],),
 
