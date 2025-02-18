@@ -57,7 +57,63 @@ class HomeNavView extends StatelessWidget {
             Expanded(
               flex: 30,
                 child:PercentageContainer(percentage: '56%')),
-          ],)
+          ],),
+
+          Padding(
+            padding:  EdgeInsets.symmetric(vertical: height*.02),
+            child: Card(
+              color: Colors.grey.shade100,
+              child: Container(
+                width: width*1,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  border: Border.all(color: Colors.grey),
+                ),
+                child: Column(children: [
+                  Padding(
+                    padding:  EdgeInsets.symmetric(vertical: height*.005,horizontal: width*.02),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                      BoldText(text: "Available Balance",fontSize: 16,),
+                     Icon(Icons.arrow_forward),
+                    ],),
+                  ),
+                  Divider(),
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: height*.02,horizontal: width*.02),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                      CustomText(text: 'Cash'),
+                      CustomText(text: '5600.00'),
+                      CustomText(text: 'Bank'),
+                      CustomText(text: '560038935.00'),
+                    ],),
+                  )
+                ],),
+              ),
+            ),
+          ),
+
+
+          Container(
+            height: height*.2,
+            width: width*1,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(color: Colors.grey),
+            ),
+            child: Column(children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  BoldText(text: "Available Balance",fontSize: 16,),
+                  Icon(Icons.arrow_forward),
+                ],),
+              Divider()
+            ],),
+          )
         ],),
       ),
     );
