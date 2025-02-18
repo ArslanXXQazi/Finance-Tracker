@@ -30,46 +30,69 @@ class PortfolioNavView extends StatelessWidget {
       ),
       body: Column(children: [
         Center(
-          child: Container(
-            height: height*.4,
-            width: width*.8,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Colors.grey),
-            ),
-            child: Center(
-              child: Column(
-                children: [
-                BoldText(text: 'Overview',),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+          child: Card(
+            color: Colors.grey.shade100,
+            child: Container(
+              height: height*.4,
+              width: width*.9,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: Colors.grey),
+              ),
+              child: Center(
+                child: Column(
                   children: [
-                  CustomText(text: 'Financial health: '),
-                  CustomText(text: 'Good',color: Colors.green.shade800,),
-                ],),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: height*.02),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  BoldText(text: 'Overview',),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                    Row(children: [
-                      CustomText(text: '1M:'),
-                      ImageIcon(AssetImage(Appimages.up),size: width*.03,color: Colors.green,),
-                      CustomText(text: '1.6M%'),
-                    ],),
-                    Row(children: [
-                      CustomText(text: '6M:'),
-                      ImageIcon(AssetImage(Appimages.up),size: width*.03,color: Colors.green,),
-                      CustomText(text: '2.5%'),
-                    ],),
-                    Row(children: [
-                      CustomText(text: '1Y:'),
-                      ImageIcon(AssetImage(Appimages.down),size: width*.03,color: Colors.red,),
-                      CustomText(text: '3.6M%'),
-                    ],)
+                    CustomText(text: 'Financial health: '),
+                    CustomText(text: 'Good',color: Colors.green.shade800,),
                   ],),
-                )
-              ],),
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: height*.015),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                      Row(children: [
+                        CustomText(text: '1M:'),
+                        ImageIcon(AssetImage(Appimages.up),size: width*.03,color: Colors.green,),
+                        CustomText(text: '1.6M%'),
+                      ],),
+                      Row(children: [
+                        CustomText(text: '6M:'),
+                        ImageIcon(AssetImage(Appimages.up),size: width*.03,color: Colors.green,),
+                        CustomText(text: '2.5%'),
+                      ],),
+                      Row(children: [
+                        CustomText(text: '1Y:'),
+                        ImageIcon(AssetImage(Appimages.down),size: width*.03,color: Colors.red,),
+                        CustomText(text: '3.6M%'),
+                      ],)
+                    ],),
+                  ),
+                  BoldText(text: '₹10,00,000.00',fontSize: 22,),
+                  Divider(),
+                  Container(
+                   // height: height*.2,
+                    width: width*1,
+                    child: Row(children: [
+                      Expanded(child:  SizedBox(
+                        height: width*.15,
+                        width: width*.15,
+                        child: CircularProgressIndicator(
+                          value:.7,
+                          valueColor: AlwaysStoppedAnimation<Color>(Colors.lightBlueAccent),
+                          backgroundColor: Colors.lightBlueAccent.shade100,
+                          strokeWidth: width*.05,
+
+                        ),//.animate().flipH(duration: 7.seconds),
+                      ))
+                    ],),
+
+                  )
+                ],),
+              ),
             ),
           ),
         )
