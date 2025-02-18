@@ -1,6 +1,7 @@
 import 'package:finance_tracker/src/controller/components/chart.dart';
 import 'package:finance_tracker/src/controller/components/custom_text.dart';
 import 'package:finance_tracker/src/controller/components/percentage_container.dart';
+import 'package:finance_tracker/src/controller/components/up_coming_payment_row.dart';
 import 'package:finance_tracker/src/controller/constant/images.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
@@ -66,8 +67,8 @@ class HomeNavView extends StatelessWidget {
               child: Container(
                 width: width*1,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  border: Border.all(color: Colors.grey),
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: Colors.grey.shade400),
                 ),
                 child: Column(children: [
                   Padding(
@@ -97,70 +98,59 @@ class HomeNavView extends StatelessWidget {
           ),
 
 
-          Container(
-         //   height: height*.2,
-            width: width*1,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Colors.grey),
-            ),
-            child: Column(children: [
-              Padding(
-                padding:  EdgeInsets.symmetric(vertical: height*.005,horizontal: width*.02),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    BoldText(text: "Upcoming Payments",fontSize: 16,),
-                    Icon(Icons.arrow_forward),
-                  ],),
+          Card(
+            color: Colors.grey.shade100,
+            child: Container(
+                     //   height: height*.2,
+              width: width*1,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                border: Border.all(color: Colors.grey),
               ),
-              Divider(),
-             Padding(
-               padding:  EdgeInsets.symmetric(vertical: height*.01,horizontal: width*.02),
-               child: Column(children: [
-                 Row(
-                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                   children: [
-                     Column(
-                       crossAxisAlignment: CrossAxisAlignment.start,
-                       children: [
-                         CustomText(text: '28 feb 2025'),
-                         CustomText(text: 'credit car'),
-                       ],
-                     ),
-                     CustomText(text: '2678.00',color: Colors.red,),
-                     CustomText(text: 'Payables',color: Colors.red,),
-                     CustomText(text: '2678.00',color: Colors.red,),
+              child: Column(children: [
+                Padding(
+                  padding:  EdgeInsets.symmetric(vertical: height*.005,horizontal: width*.02),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      BoldText(text: "Upcoming Payments",fontSize: 16,),
+                      Icon(Icons.arrow_forward),
+                    ],),
+                ),
+                Divider(),
+               Padding(
+                 padding:  EdgeInsets.symmetric(vertical: height*.01,horizontal: width*.02),
+                 child: Column(children: [
+                  UpComingPaymentRow(
+                      date: '28 feb 2025',
+                      card: 'Credit Card',
+                      amount: '1,000',
+                    payables_receivable: 'Payables',
+                      pay_rece_amount: '7.5',
 
-                   ],),
-                 Row(
-                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                   children: [
-                     Column(
-                       crossAxisAlignment: CrossAxisAlignment.start,
-                       children: [
-                         CustomText(text: '28 feb 2025'),
-                         CustomText(text: 'credit car'),
-                       ],
-                     ),
-                     CustomText(text: '2678.00',color: Colors.red,),
-                     CustomText(text: 'Receviables',color: Colors.red,),
-                     CustomText(text: '2678.00',color: Colors.red,),
 
-                   ],),
-                 Row(
-                   children: [
-                     Column(
-                       crossAxisAlignment: CrossAxisAlignment.start,
-                       children: [
-                         CustomText(text: '28 feb 2025'),
-                         CustomText(text: 'credit car'),
-                       ],
-                     ),
-                     CustomText(text: '2678.00',color: Colors.red,),],),
-               ],),
-             )
-            ],),
+                  ),
+                  UpComingPaymentRow(
+                      date: '28 feb 2025',
+                      card: 'Car Loan EMI',
+                      amount: '5,000',
+                    payables_receivable: 'Receivable',
+                      pay_rece_amount: '7.5',
+                  ),
+                   // Row(
+                   //   children: [
+                   //     Column(
+                   //       crossAxisAlignment: CrossAxisAlignment.start,
+                   //       children: [
+                   //         CustomText(text: '28 feb 2025'),
+                   //         CustomText(text: 'credit car'),
+                   //       ],
+                   //     ),
+                   //     CustomText(text: '2678.00',color: Colors.red,),],),
+                 ],),
+               )
+              ],),
+            ),
           )
         ],),
       ),
