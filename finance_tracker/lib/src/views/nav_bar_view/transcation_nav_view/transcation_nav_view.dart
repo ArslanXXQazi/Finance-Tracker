@@ -89,7 +89,6 @@ class _TranscationNavViewState extends State<TranscationNavView> with SingleTick
           Container(
             child: TabBar(
               controller: tabController,
-
               indicatorColor: Colors.transparent,
               indicator: BoxDecoration(),
               labelPadding: EdgeInsets.zero,
@@ -151,13 +150,13 @@ class _TranscationNavViewState extends State<TranscationNavView> with SingleTick
               ],
             ),
           ),
-          TabBarView(
-            controller: tabController,
+          Expanded(child: TabBarView(
+              controller: tabController,
               children: [
-            SettleUpView(),
-            SettleUpView(),
-            SettleUpView(),
-          ]),
+                SettleUpView(),
+                SettleUpView(),
+                SettleUpView(),
+              ]))
         ],
       ),
     );
