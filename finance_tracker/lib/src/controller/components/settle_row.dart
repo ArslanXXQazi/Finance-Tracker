@@ -22,7 +22,7 @@ class SettleRow extends StatelessWidget {
     final width = MediaQuery.sizeOf(context).width;
     final height = MediaQuery.sizeOf(context).height;
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: height*.01),
+      padding: EdgeInsets.symmetric(vertical: height*.006),
       child: Column(
         children: [
           Row(

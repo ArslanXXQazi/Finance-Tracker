@@ -1,5 +1,3 @@
-
-
 import 'package:finance_tracker/src/controller/components/bouncing_text.dart';
 import 'package:finance_tracker/src/controller/constant/linker.dart';
 import 'package:finance_tracker/src/views/nav_bar_view/portfolio_nav_view/assets_tapbar.dart';

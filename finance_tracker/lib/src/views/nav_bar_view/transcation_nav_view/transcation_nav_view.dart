@@ -61,6 +61,7 @@ class _TranscationNavViewState extends State<TranscationNavView> with SingleTick
       ),
       body: Column(
         children: [
+          Divider(),
           //==================================>>>Row for Clander
           Padding(
             padding:  EdgeInsets.only(left: width*.23),
@@ -165,6 +166,7 @@ class _TranscationNavViewState extends State<TranscationNavView> with SingleTick
             ],
           ),
           //==================================>>>Expended For TapBar View
+          SizedBox(height: height*.02,),
           Expanded(child: TabBarView(
               controller: tabController,
               children: [
