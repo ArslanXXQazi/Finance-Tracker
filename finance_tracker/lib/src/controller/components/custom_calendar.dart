@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CustomMonthPicker extends StatefulWidget {
-  final Function(int, int) onMonthSelected; // مہینہ اور سال واپس دینے کے لیے
+  final Function(String, int) onMonthSelected;
 
-  CustomMonthPicker({required this.onMonthSelected});
+  const CustomMonthPicker({super.key, required this.onMonthSelected});
 
   @override
   _CustomMonthPickerState createState() => _CustomMonthPickerState();
@@ -13,48 +13,37 @@ class _CustomMonthPickerState extends State<CustomMonthPicker> {
   int selectedYear = DateTime.now().year;
   int selectedMonth = DateTime.now().month;
 
-  void _selectMonth(int month) {
-    setState(() {
-      selectedMonth = month;
-    });
-    widget.onMonthSelected(selectedMonth, selectedYear);
-    Navigator.pop(context);
-  }
-
-  String _getMonthName(int month) {
-    List<String> months = [
-      "January", "February", "March", "April", "May", "June",
-      "July", "August", "September", "October", "November", "December"
-    ];
-    return months[month - 1];
-  }
+  List<String> months = [
+    "January", "February", "March", "April", "May", "June", "July",
+    "August", "September", "October", "November", "December"
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return AlertDialog(
-      title: Text("Select Month & Year"),
-      content: SizedBox(
-        height: 250,
+    return Dialog(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+      child: Padding(
+        padding: const EdgeInsets.all(15.0),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            // سال تبدیل کرنے کے لیے
+            Text("Select Month & Year", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            SizedBox(height: 10),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 IconButton(
-                  icon: Icon(Icons.arrow_back),
+                  icon: Icon(Icons.arrow_left),
                   onPressed: () {
                     setState(() {
-                      selectedYear--;
+                      if (selectedYear > 2000) selectedYear--;
                     });
                   },
                 ),
-                Text(
-                  "$selectedYear",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
+                Text("$selectedYear", style: TextStyle(fontSize: 18)),
                 IconButton(
-                  icon: Icon(Icons.arrow_forward),
+                  icon: Icon(Icons.arrow_right),
                   onPressed: () {
                     setState(() {
                       selectedYear++;
@@ -63,36 +52,30 @@ class _CustomMonthPickerState extends State<CustomMonthPicker> {
                 ),
               ],
             ),
-            Divider(),
-            // مہینے منتخب کرنے کے لیے
-            Expanded(
-              child: GridView.builder(
-                itemCount: 12,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  childAspectRatio: 2,
-                ),
-                itemBuilder: (context, index) {
-                  return InkWell(
-                    onTap: () => _selectMonth(index + 1),
-                    child: Card(
-                      color: selectedMonth == index + 1
-                          ? Colors.blue
-                          : Colors.white,
-                      child: Center(
-                        child: Text(
-                          _getMonthName(index + 1),
-                          style: TextStyle(
-                            color: selectedMonth == index + 1
-                                ? Colors.white
-                                : Colors.black,
-                          ),
-                        ),
+
+            Wrap(
+              spacing: 10,
+              children: List.generate(months.length, (index) {
+                return InkWell(
+                  onTap: () {
+                    widget.onMonthSelected(months[index], selectedYear);
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                    decoration: BoxDecoration(
+                      color: selectedMonth == index + 1 ? Colors.blue : Colors.grey[300],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Text(
+                      months[index],
+                      style: TextStyle(
+                        color: selectedMonth == index + 1 ? Colors.white : Colors.black,
                       ),
                     ),
-                  );
-                },
-              ),
+                  ),
+                );
+              }),
             ),
           ],
         ),
