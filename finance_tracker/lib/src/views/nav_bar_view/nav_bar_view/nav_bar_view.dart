@@ -158,6 +158,7 @@ class _NavBarViewState extends State<NavBarView> {
       backgroundColor: Colors.grey.shade200,
       body: PersistentTabView(
         context,
+
         controller: _controller,
         screens: _buildScreens(),
         items: _navBarsItems(context),
