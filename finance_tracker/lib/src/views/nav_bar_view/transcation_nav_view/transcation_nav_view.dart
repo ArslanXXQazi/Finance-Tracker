@@ -338,7 +338,7 @@ class _TranscationNavViewState extends State<TranscationNavView> with SingleTick
             ),
           ),
         ],
-      ),
+      ).animate().fadeIn(duration: 1.seconds).slideY(),
     );
   }
 

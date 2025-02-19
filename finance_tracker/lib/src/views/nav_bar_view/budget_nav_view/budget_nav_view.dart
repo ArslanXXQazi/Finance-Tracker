@@ -117,7 +117,6 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:finance_tracker/src/controller/components/custom_calendar.dart';
 import 'package:finance_tracker/src/controller/constant/linker.dart';
 import 'package:intl/intl.dart';
 import 'package:month_picker_dialog/month_picker_dialog.dart';
@@ -224,7 +223,7 @@ class _BudgetNavViewState extends State<BudgetNavView> {
                 children: [
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: height * .01),
-                    child: BoldText(text: 'Budgeted for ${selectedDate.month}, ${selectedDate.year}'),
+                    child: BoldText(text: 'Budgeted for ${DateFormat('MMM, yyyy').format(selectedDate)}'),
                   ),
                   Divider(),
                   BudgetItemRow(name: "Dining", limit: 1000.00, spent: 256),
@@ -247,7 +246,7 @@ class _BudgetNavViewState extends State<BudgetNavView> {
               ),
             )
           ],
-        ),
+        ).animate().fadeIn(duration: 1.seconds).slideY(),
       ),
     );
   }
