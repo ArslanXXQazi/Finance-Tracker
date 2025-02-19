@@ -44,6 +44,7 @@ class _TranscationNavViewState extends State<TranscationNavView> with SingleTick
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
+        backgroundColor: Colors.grey.shade100,
         title: CustomText(text: 'Transcation', fontSize: 22),
         actions: [
           InkWell(
@@ -64,6 +65,16 @@ class _TranscationNavViewState extends State<TranscationNavView> with SingleTick
       ),
       body: Column(
         children: [
+          //==================================>>>Row for Clander
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              IconButton(icon: Icon(Icons.chevron_left), onPressed: () {}),
+              CustomText(text: 'February, 2025',fontSize: 18,),
+              IconButton(icon: Icon(Icons.chevron_right), onPressed: () {}),
+            ],
+          ).animate().fadeIn(duration: 2.seconds).slideY(),
+          //==================================>>>Row for InComing Expense And Total
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -87,70 +98,70 @@ class _TranscationNavViewState extends State<TranscationNavView> with SingleTick
               ),
             ],
           ),
-          Container(
-            child: TabBar(
-              controller: tabController,
-              indicatorColor: Colors.transparent,
-              indicator: BoxDecoration(),
-              labelPadding: EdgeInsets.zero,
-              tabs: [
-                Tab(
-                  child: SizedBox(
-                    width: width * .27,
-                    child: CustomButton(
-                      onTap: () {
-                        setState(() {
-                          selectedIndex=0;
-                        });// Change tab
-                        tabController.animateTo(0);
-                      },
-                      text: 'Settle Up',
-                      backColor: selectedIndex == 0 ? Appcolors.green : Colors.grey.shade100,
-                      borderColor: selectedIndex == 0 ? Appcolors.green : Colors.black,
-                      fontColor: selectedIndex == 0 ? Colors.white : Colors.black,
-                    ),
+          //==================================>>>TabBar For Buttons
+          TabBar(
+            controller: tabController,
+            indicatorColor: Colors.transparent,
+            indicator: BoxDecoration(),
+            labelPadding: EdgeInsets.zero,
+            tabs: [
+              Tab(
+                child: SizedBox(
+                  width: width * .27,
+                  child: CustomButton(
+                    onTap: () {
+                      setState(() {
+                        selectedIndex=0;
+                      });// Change tab
+                      tabController.animateTo(0);
+                    },
+                    text: 'Settle Up',
+                    backColor: selectedIndex == 0 ? Appcolors.green : Colors.grey.shade100,
+                    borderColor: selectedIndex == 0 ? Appcolors.green : Colors.black,
+                    fontColor: selectedIndex == 0 ? Colors.white : Colors.black,
                   ),
                 ),
-                Tab(
-                  child: SizedBox(
-                    width: width * .27,
-                    child: CustomButton(
-                      onTap: () {
+              ),
+              Tab(
+                child: SizedBox(
+                  width: width * .27,
+                  child: CustomButton(
+                    onTap: () {
 
-                        setState(() {
-                          selectedIndex=1;
-                        });
-                        tabController.animateTo(1);
-                      },
-                      text: 'Charts',
-                     backColor: selectedIndex == 1 ? Appcolors.green : Colors.grey.shade100,
-                     borderColor: selectedIndex == 1 ? Appcolors.green : Colors.black,
-                     fontColor: selectedIndex == 1 ? Colors.white : Colors.black,
+                      setState(() {
+                        selectedIndex=1;
+                      });
+                      tabController.animateTo(1);
+                    },
+                    text: 'Charts',
+                   backColor: selectedIndex == 1 ? Appcolors.green : Colors.grey.shade100,
+                   borderColor: selectedIndex == 1 ? Appcolors.green : Colors.black,
+                   fontColor: selectedIndex == 1 ? Colors.white : Colors.black,
 
-                    ),
                   ),
                 ),
-                Tab(
-                  child: SizedBox(
-                    width: width * .27,
-                    child: CustomButton(
-                      onTap: () {
+              ),
+              Tab(
+                child: SizedBox(
+                  width: width * .27,
+                  child: CustomButton(
+                    onTap: () {
 
-                        setState(() {
-                          selectedIndex=2;
-                        });
-                        tabController.animateTo(2);
-                      },
-                      text: 'Reports',
-                      backColor: selectedIndex == 2 ? Appcolors.green : Colors.grey.shade100,
-                      borderColor: selectedIndex == 2 ? Appcolors.green : Colors.black,
-                      fontColor: selectedIndex == 2 ? Colors.white : Colors.black,
-                    ),
+                      setState(() {
+                        selectedIndex=2;
+                      });
+                      tabController.animateTo(2);
+                    },
+                    text: 'Reports',
+                    backColor: selectedIndex == 2 ? Appcolors.green : Colors.grey.shade100,
+                    borderColor: selectedIndex == 2 ? Appcolors.green : Colors.black,
+                    fontColor: selectedIndex == 2 ? Colors.white : Colors.black,
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
+          //==================================>>>Expended For TapBar View
           Expanded(child: TabBarView(
               controller: tabController,
               children: [
