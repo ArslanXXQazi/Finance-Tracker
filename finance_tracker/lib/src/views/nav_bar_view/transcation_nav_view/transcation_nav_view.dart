@@ -94,10 +94,11 @@ class _TranscationNavViewState extends State<TranscationNavView> with SingleTick
                     width: width * .27,
                     child: CustomButton(
                       onTap: () {
-                        tabController.animateTo(0);
+
                         setState(() {
                           selectedIndex=0;
                         });// Change tab
+                        tabController.animateTo(0);
                       },
                       text: 'Settle Up',
                       backColor: selectedIndex == 0 ? Colors.blue : Colors.grey, // Change color on selection
@@ -109,10 +110,11 @@ class _TranscationNavViewState extends State<TranscationNavView> with SingleTick
                     width: width * .27,
                     child: CustomButton(
                       onTap: () {
-                        tabController.animateTo(1);
+
                         setState(() {
                           selectedIndex=1;
                         });
+                        tabController.animateTo(1);
                       },
                       text: 'Charts',
                      backColor: selectedIndex == 1 ? Colors.blue : Colors.grey,
@@ -124,10 +126,11 @@ class _TranscationNavViewState extends State<TranscationNavView> with SingleTick
                     width: width * .27,
                     child: CustomButton(
                       onTap: () {
-                        tabController.animateTo(2);
+
                         setState(() {
                           selectedIndex=2;
                         });
+                        tabController.animateTo(2);
                       },
                       text: 'Reports',
                       backColor: selectedIndex == 2 ? Colors.blue : Colors.grey,
