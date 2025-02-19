@@ -1,4 +1,5 @@
 import 'package:finance_tracker/src/controller/constant/colors.dart';
+import 'package:finance_tracker/src/views/nav_bar_view/transcation_nav_view/settle_up_view.dart';
 import 'package:flutter/material.dart';
 import 'package:finance_tracker/src/controller/components/custom_button.dart';
 import 'package:finance_tracker/src/controller/constant/linker.dart';
@@ -150,6 +151,13 @@ class _TranscationNavViewState extends State<TranscationNavView> with SingleTick
               ],
             ),
           ),
+          TabBarView(
+            controller: tabController,
+              children: [
+            SettleUpView(),
+            SettleUpView(),
+            SettleUpView(),
+          ]),
         ],
       ),
     );
