@@ -99,6 +99,7 @@ class _TranscationNavViewState extends State<TranscationNavView> with SingleTick
             ],
           ),
           //==================================>>>TabBar For Buttons
+          SizedBox(height: height*.02,),
           TabBar(
             controller: tabController,
             indicatorColor: Colors.transparent,
