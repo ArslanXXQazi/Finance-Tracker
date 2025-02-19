@@ -111,16 +111,16 @@ class _PortfolioNavViewState extends State<PortfolioNavView> with SingleTickerPr
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                             Container(
-                              height: height*.015,
-                              width: width*.03,
-                              color: Colors.lightBlueAccent.shade100,
+                              height: height*.011,
+                              width: width*.02,
+                              color: Colors.cyanAccent,
                             ),
                             SizedBox(width: width*.02,),
                             CustomText(text: 'Assets',fontSize: 12,),
                               SizedBox(width: width*.02,),
                             Container(
-                              height: height*.015,
-                              width: width*.03,
+                              height: height*.011,
+                              width: width*.02,
                               color: Colors.lightBlueAccent,
                             ),
                             SizedBox(width: width*.02,),
@@ -134,7 +134,7 @@ class _PortfolioNavViewState extends State<PortfolioNavView> with SingleTickerPr
                               child: CircularProgressIndicator(
                                 value:.7,
                                 valueColor: AlwaysStoppedAnimation<Color>(Colors.lightBlueAccent),
-                                backgroundColor: Colors.lightBlueAccent.shade100,
+                                backgroundColor: Colors.cyanAccent,
                                 strokeWidth: width*.09,
                               ).animate().flipH(duration: 5.seconds),
                             ),
@@ -161,6 +161,7 @@ class _PortfolioNavViewState extends State<PortfolioNavView> with SingleTickerPr
                             ],),
                             SizedBox(height: height*.01,),
                             BoldText(text: 'Top Liabilities',fontSize: 16,),
+                            SizedBox(height: height*.01,),
                             Row(children: [
                               Icon(Icons.circle,size: width*.02,),
                               SizedBox(width: width*.02,),

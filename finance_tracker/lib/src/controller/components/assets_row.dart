@@ -28,7 +28,7 @@ class AssetsRow extends StatelessWidget {
             SizedBox(width: width*.03,),
             CustomText(text: name,fontWeight: FontWeight.bold,),
           ],),
-          CustomText(text:amount,color: Colors.green,),
+          CustomText(text:amount,color: Colors.green,fontWeight: FontWeight.bold,),
         ],),
     );
   }
