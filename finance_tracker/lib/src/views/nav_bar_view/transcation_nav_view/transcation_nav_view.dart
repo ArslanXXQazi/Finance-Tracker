@@ -1,3 +1,4 @@
+import 'package:finance_tracker/src/controller/constant/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:finance_tracker/src/controller/components/custom_button.dart';
 import 'package:finance_tracker/src/controller/constant/linker.dart';
@@ -87,21 +88,25 @@ class _TranscationNavViewState extends State<TranscationNavView> with SingleTick
           Container(
             child: TabBar(
               controller: tabController,
-              indicatorColor: Colors.transparent, // Hide default indicator
+
+              indicatorColor: Colors.transparent,
+              indicator: BoxDecoration(),
+              labelPadding: EdgeInsets.zero,
               tabs: [
                 Tab(
                   child: SizedBox(
                     width: width * .27,
                     child: CustomButton(
                       onTap: () {
-
                         setState(() {
                           selectedIndex=0;
                         });// Change tab
                         tabController.animateTo(0);
                       },
                       text: 'Settle Up',
-                      backColor: selectedIndex == 0 ? Colors.blue : Colors.grey, // Change color on selection
+                      backColor: selectedIndex == 0 ? Appcolors.green : Colors.grey.shade100,
+                      borderColor: selectedIndex == 0 ? Appcolors.green : Colors.black,
+                      fontColor: selectedIndex == 0 ? Colors.white : Colors.black,
                     ),
                   ),
                 ),
@@ -117,7 +122,10 @@ class _TranscationNavViewState extends State<TranscationNavView> with SingleTick
                         tabController.animateTo(1);
                       },
                       text: 'Charts',
-                     backColor: selectedIndex == 1 ? Colors.blue : Colors.grey,
+                     backColor: selectedIndex == 1 ? Appcolors.green : Colors.grey.shade100,
+                     borderColor: selectedIndex == 1 ? Appcolors.green : Colors.black,
+                     fontColor: selectedIndex == 1 ? Colors.white : Colors.black,
+
                     ),
                   ),
                 ),
@@ -133,7 +141,9 @@ class _TranscationNavViewState extends State<TranscationNavView> with SingleTick
                         tabController.animateTo(2);
                       },
                       text: 'Reports',
-                      backColor: selectedIndex == 2 ? Colors.blue : Colors.grey,
+                      backColor: selectedIndex == 2 ? Appcolors.green : Colors.grey.shade100,
+                      borderColor: selectedIndex == 2 ? Appcolors.green : Colors.black,
+                      fontColor: selectedIndex == 2 ? Colors.white : Colors.black,
                     ),
                   ),
                 ),
