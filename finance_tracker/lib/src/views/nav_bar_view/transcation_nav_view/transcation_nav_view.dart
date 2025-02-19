@@ -39,6 +39,7 @@ class _TranscationNavViewState extends State<TranscationNavView> with SingleTick
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.sizeOf(context).width;
+    final height = MediaQuery.sizeOf(context).height;
 
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
