@@ -62,14 +62,20 @@ class _TranscationNavViewState extends State<TranscationNavView> with SingleTick
       body: Column(
         children: [
           //==================================>>>Row for Clander
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              IconButton(icon: Icon(Icons.chevron_left), onPressed: () {}),
-              CustomText(text: 'February, 2025',fontSize: 18,),
-              IconButton(icon: Icon(Icons.chevron_right), onPressed: () {}),
-            ],
-          ).animate().fadeIn(duration: 2.seconds).slideY(),
+          Padding(
+            padding:  EdgeInsets.only(left: width*.23),
+            child: Row(
+              children: [
+              Row(children: [
+                IconButton(icon: Icon(Icons.chevron_left), onPressed: () {}),
+                CustomText(text: 'February, 2025',fontSize: 18,),
+                IconButton(icon: Icon(Icons.chevron_right), onPressed: () {}),
+              ],),
+                SizedBox(width: width*.13,),
+                Icon(Icons.menu),
+              ],
+            ).animate().fadeIn(duration: 2.seconds).slideY(),
+          ),
           //==================================>>>Row for InComing Expense And Total
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

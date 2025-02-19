@@ -8,3 +8,8 @@ export 'package:flutter/material.dart';
 export 'package:flutter_animate/flutter_animate.dart';
 export 'package:finance_tracker/src/controller/components/budget_item_row.dart';
 export 'package:finance_tracker/src/controller/components/non_budgeted_row.dart';
+export 'package:finance_tracker/src/controller/constant/colors.dart';
+export 'package:finance_tracker/src/views/nav_bar_view/transcation_nav_view/charts_view.dart';
+export 'package:finance_tracker/src/views/nav_bar_view/transcation_nav_view/report_view.dart';
+export 'package:finance_tracker/src/views/nav_bar_view/transcation_nav_view/settle_up_view.dart';
+export 'package:finance_tracker/src/controller/components/custom_button.dart';
