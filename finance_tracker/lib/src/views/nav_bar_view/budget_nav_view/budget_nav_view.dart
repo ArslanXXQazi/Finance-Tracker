@@ -228,7 +228,7 @@ class _BudgetNavViewState extends State<BudgetNavView> {
                   Divider(),
                   BudgetItemRow(name: "Dining", limit: 1000.00, spent: 256),
                   Divider(),
-                  BudgetItemRow(name: "Groceries", limit: 500.00, spent: 400),
+                  BudgetItemRow(name: "Groceries", limit: 500.00, spent: 500),
                   Divider(),
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: height * .01),

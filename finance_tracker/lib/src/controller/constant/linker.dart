@@ -13,3 +13,8 @@ export 'package:finance_tracker/src/views/nav_bar_view/transcation_nav_view/char
 export 'package:finance_tracker/src/views/nav_bar_view/transcation_nav_view/report_view.dart';
 export 'package:finance_tracker/src/views/nav_bar_view/transcation_nav_view/settle_up_view.dart';
 export 'package:finance_tracker/src/controller/components/custom_button.dart';
+export 'package:finance_tracker/src/views/nav_bar_view/budget_nav_view/budget_nav_view.dart';
+export 'package:finance_tracker/src/views/nav_bar_view/home_nav_view/home_nav_view.dart';
+export 'package:finance_tracker/src/views/nav_bar_view/portfolio_nav_view/portfolio_nav_view.dart';
+export 'package:finance_tracker/src/views/nav_bar_view/transcation_nav_view/transcation_nav_view.dart';
+export 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';

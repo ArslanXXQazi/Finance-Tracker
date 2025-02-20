@@ -68,13 +68,10 @@
 //     );
 //   }
 // }
-import 'package:finance_tracker/src/views/nav_bar_view/budget_nav_view/budget_nav_view.dart';
-import 'package:finance_tracker/src/views/nav_bar_view/home_nav_view/home_nav_view.dart';
-import 'package:finance_tracker/src/views/nav_bar_view/portfolio_nav_view/portfolio_nav_view.dart';
-import 'package:finance_tracker/src/views/nav_bar_view/transcation_nav_view/transcation_nav_view.dart';
-import 'package:flutter/material.dart';
-import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
-import 'package:finance_tracker/src/controller/constant/images.dart';
+
+
+
+import 'package:finance_tracker/src/controller/constant/linker.dart';
 
 
 class NavBarView extends StatefulWidget {
@@ -120,13 +117,13 @@ class _NavBarViewState extends State<NavBarView> {
           decoration: BoxDecoration(
             color: Colors.green,
             shape: BoxShape.circle,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.3),
-                spreadRadius: 2,
-                blurRadius: 5,
-              ),
-            ],
+            // boxShadow: [
+            //   BoxShadow(
+            //     color: Colors.black.withOpacity(0.3),
+            //     spreadRadius: 2,
+            //     blurRadius: 5,
+            //   ),
+            // ],
           ),
           child: Icon(Icons.add, size: width * 0.10, color: Colors.white),
         ),
